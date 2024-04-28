@@ -1,4 +1,4 @@
-<h1>Java Number Guessing Game &#x1F5A9;</h1>
+<h1>Java Number Guessing Game &#x1F3B2;</h1>
 
 <img src="/ngg-read.png">
 <h2>Inside code: &#x1F4C3;</h2>
