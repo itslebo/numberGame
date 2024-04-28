@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class NumberGuessingGame {
 
     public static void main(String[] args) {
-        double random = Math.random() * 10 + 1;
+        double random = Math.round(Math.random() * 10 + 1);
         Scanner sc = new Scanner(System.in);
         String replay;
         char repl;
@@ -13,16 +13,16 @@ public class NumberGuessingGame {
                 System.out.println("Guess a number between 1 and 10.");
                 double input;
                 try {
-                    input = Double.parseDouble(sc.nextLine());
+                    input = Integer.parseInt(sc.nextLine());
                 } catch (NumberFormatException e) {
                     System.out.println("Invalid input. Please enter a number.");
                     continue;
                 }
                 if (input > random) {
-                    System.out.println("Your number may be a bit big. \n You have " + (i -1) + " tries.");
+                    System.out.println("Your number may be a bit big. \n You have " + (i - 1) + " tries.");
                 } else if (input < random) {
-                    System.out.println("Your number may be a bit small. \n You have " + (i -1) + " tries.");
-                } else {
+                    System.out.println("Your number may be a bit small. \n You have " + (i - 1) + " tries.");
+                } else if (input == random) {
                     System.out.println("You nailed it");
                     break;
                 }
